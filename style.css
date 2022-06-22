@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.main1{
+    height: 1900px;
+    margin: 0;
+    border:0;
+    padding:0;
+}
+.title{
+    text-align: center;
+    color:#e3dff6;
+    font-size: 50px;
+    text-shadow: 5px 5px 10px rgb(248, 244, 17);
+    font-style: calc(70);
+
+
+}
+.tac{
+    color:#f6b592 ;
+    font-size: 90px;
+    text-shadow: 5px 5px 10px rgb(248, 244, 17);
+}
+.backGround{
+    background-image:url("space.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10vh;
+    height: 100vh;
+}
+.displayPlayer {
+    font-size:40px ;
+    text-align: center;
+    color:#c0bcda;
+    font-weight:lighter;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 2px 2px 5px rgb(248, 244, 17);
+}
+.playerx{
+    color:#f93e05 ;  
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}  
+.button{
+    text-align: center;
+    background-color: #f93e05;
+
+}

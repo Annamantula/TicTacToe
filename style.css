@@ -1,34 +1,57 @@
-*{
+*{  
+    margin: 0;
+    margin-bottom:0;
     padding: 0;
-    margin: 0;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-.main1{
-    height: 1900px;
-    margin: 0;
-    border:0;
-    padding:0;
 }
 .title{
-    text-align: center;
+    text-align: center;  
     color:#e3dff6;
+    /* opacity: 0.8; */
     font-size: 50px;
     text-shadow: 5px 5px 10px rgb(248, 244, 17);
     font-style: calc(70);
-
-
 }
 .tac{
+    text-align: center;
     color:#f6b592 ;
     font-size: 90px;
-    text-shadow: 5px 5px 10px rgb(248, 244, 17);
+    text-shadow: 10px 5px 10px rgb(248, 244, 17);
 }
-.backGround{
+.playerName{
+    width: 480px;
+    height: 100px;
+}
+.playerN{
+    opacity: 0.5;
+    display:inline;
+    margin: 5px;
+    margin-right:0;
+    padding-right:0;
+    padding: 5px;
+    margin-left:20px;
+    padding-left:20px;
+    box-shadow: 50px 20px 50px rgb(12, 12, 12);
+    border-radius: 15%;
+}
+#nameBtn{
+    margin: 6px;
+    padding: 6px;
+    margin-left:0;
+    padding-left:0;
+    background-color: #c0bcda;
+    box-shadow: 50px 20px 50px rgb(12, 12, 12);
+    border-radius: 30%;
+}
+.backGround{ 
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-image:url("space.png");
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 10vh;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .displayPlayer {
     font-size:40px ;
@@ -36,15 +59,152 @@
     color:#c0bcda;
     font-weight:lighter;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-shadow: 2px 2px 5px rgb(248, 244, 17);
+    text-shadow: 10px 5px 10px rgb(7, 7, 7);
 }
 .playerx{
     color:#f93e05 ;  
     font-weight: bolder;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }  
-.button{
+.gameGrid{
+    width: 450px;
+    height: 450px;
+    margin: 0px auto;
+    position: relative;
+    z-index: 10;
+    flex-wrap: wrap;    
+}
+#board {
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    cursor: pointer;
+    background:rgb(192, 188, 218, .2);
+    box-shadow:30px 5px 30px #19182a;
+    box-shadow: inset rgba(253, 252, 254, 0.7);
+    border-radius: 10%;
+}
+.cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 153px;
+    height: 153px;
+    color: #f6b15c;
+    opacity: 1;
+    font-size: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
+    text-shadow: 10px 1px 10px rgb(248, 248, 245);
+}
+.right-border{
+    border-right: 3px solid #d37604;  
+}
+.bottom-border{
+    border-bottom: 3px solid #d37604;
+}
+.strike{
+   position: absolute;
+   background-color: #942222;
+   opacity: 0.7;
+   box-shadow: 20px 10px 20px rgb(241, 241, 206);
+}
+.strike-row-1{
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    top: 15%;
+}
+.strike-row-2{
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    top: 50%;
+}
+.strike-row-3{
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    top: 85%;
+}
+.strike-column-1{
+    position: absolute;
+    height: 100%;
+    width: 10px;
+    left: 15%;
+}
+.strike-column-2{
+    position: absolute;
+    height: 100%;
+    width: 10px;
+    left: 50%;
+}
+.strike-column-3{
+    position: absolute;
+    height: 100%;
+    width: 10px;
+    left: 85%;
+}
+.strike-diagonal-1{
+    position: absolute;
+    width: 95%;
+    height: 10px;
+    top:50%;
+    left: 0%;
+    transform:skewY(47deg)
+}
+.strike-diagonal-2{
+    position: absolute;
+    width: 95%;
+    height: 10px;
+    top: 50%;
+    left: 0%;
+    transform:skewY(-47deg)
+}
+#restart{
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    margin: 5px;
     text-align: center;
-    background-color: #f93e05;
-
+    color:rgb(255, 255, 255);
+    background-color:#f93e05;
+    opacity: 0.6;
+    border-left-color: #010101;
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: #010101;
+    border-bottom-color: white;
+    box-shadow: 50px 20px 50px rgb(12, 12, 12);
+    border-radius: 25%;
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
+#gameOver{
+    text-align: center;
+    border:  #c0bcda 5px;
+    padding:50px;
+    width: 30%;
+    margin-top:50px;
+    padding-top: 0;
+}
+h2{
+    color:#c0bcda;
+    margin-top: 0;
+    padding-bottom: 20px;
+    font-size: 34px;
+}
+.hide{
+    display: none;
+}
+.display{
+    display: block;
+}
+.X-hover:hover::after{
+    content: "X";
+    opacity: 0.3;
+}
+.O-hover:hover::after{
+    content: "O";
+    opacity: 0.3;
 }

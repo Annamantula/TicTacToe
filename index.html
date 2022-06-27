@@ -1,37 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "style.css">
-    <script src = "./index.js/"> </script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
     <title>Anna's TicTacToe</title>
-</head>
-<body>
-  <main class = "backGround">
-      <section class =  "title">
-          <h1> TIC <span class = "tac">TAC</span> TOE</h1>
-      </section>
-      <section class = "gameGrid">
-       <div class = "cell"></div>
-       <div class = "cell"></div>
-       <div class = "cell"></div>
-       <div class = "cell"></div>
-       <div class = "cell"></div>
-       <div class = "cell"></div>
-       <div class = "cell"></div>
-       <div class = "cell"></div>
-       <div class = "cell"></div>
-    </section>
-    <section class="displayPlayer">
-    PLAYER <span class = "playerx">X</span>'s TURN
-    </section>
-    <section class="display announcer"></section>
-    <section class = "controls">
-        <button id =  restart>START OVER</button>
-    </section>
-  </main>
-    
-</body>
+  </head>
+  <body class="backGround">
+    <header class="title">
+      <h1>TIC <span class="tac">TAC</span> TOE</h1>
+    </header>
+    <!-- <section class="displayPlayer">
+      PLAYER <span id="player">X</span>'s TURN
+    </section> -->
+    <div class = "playerName">
+      <span>
+        <input type = "text" id = player1 class = "playerN" placeholder = "player1"/>
+        <button type = "button" id = "nameBtn"> Add </button>
+        <span class = "output" id = "out1"></span>
+      </span>
+      <span>
+        <input type = "text" id = player2 class ="playerN" placeholder = "player2"/>
+        <button type = "button" id = "nameBtn"> Add </button>
+        <span class = "output" id = "out2"></span>
+      </span>
+    </div>
+    <div id="board" class="gameGrid">
+      <div  data-index="1" class="cell right-border bottom-border"></div>
+      <div  data-index="2" class="cell right-border bottom-border"></div>
+      <div  data-index="3" class="cell bottom-border"></div>
+      <div  data-index="4" class="cell right-border bottom-border"></div>
+      <div  data-index="5" class="cell right-border bottom-border"></div>
+      <div  data-index="6" class="cell bottom-border"></div>
+      <div  data-index="7" class="cell right-border"></div>
+      <div  data-index="8" class="cell right-border"></div>
+      <div  data-index="9" class="cell"></div>
+      <div id = "strike" class = "strike"></div>
+    </div>
+    <div id="gameOver" class="hide.">
+    <h2 id="gameOverText">Winner is</h2>
+    <button id="restart">START OVER</button>
+  </div>
+    <script src="app.js"></script>
+  </body>
 </html>

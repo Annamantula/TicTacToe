@@ -102,7 +102,3 @@ const winningSets = [
     {set:[1,5,9], strikeDir: "strike-diagonal-1"},
     {set:[3,5,7], strikeDir: "strike-diagonal-2"},
 ]
-
-
-
-
